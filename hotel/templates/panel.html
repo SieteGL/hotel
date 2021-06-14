@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load  static %}
+
+{% block content %}
+
+<div class="off-canvas-wrapper">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    
+
+    <div class="off-canvas-content" data-off-canvas-content>
+      <!-- declaramos un nuevo bloque para contenidod e panel -->
+      <div class="grid-x">
+        <div class="cell top-bar" style="background-color: #424242;">
+          <div class="top-bar-left">
+            <h4 style="color: white;">Sesion de: {{ user.full_name }}</h4>
+          </div>
+          <div class="top-bar-right">
+            <a href="{% url 'users_app:user-logout' %}">
+              <span class="label warning">Salir</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="grid-container" style="padding: 1em;">
+        {% block panel-content %}
+        {% endblock panel-content %}
+      </div>
+  </div>
+</div>
+{% endblock content %}

@@ -35,6 +35,8 @@ DJANGO_APPS = (
 LOCAL_APPS = (
     'applications.home',
     'applications.index',
+    'applications.users',
+    'applications.habitaciones'
 )
 
 THIRD_PARTY_APPS = (
@@ -91,7 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'
 
 LANGUAGE_CODE = 'es-mx'
 
